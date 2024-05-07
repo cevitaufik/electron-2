@@ -54,6 +54,10 @@ app.whenReady().then(() => {
   // IPC test
   ipcMain.on('ping', () => console.log('pong'))
 
+  ipcMain.handle('request', async (event, arg: string) => {
+    return arg.toUpperCase()
+  })
+
   createWindow()
 
   app.on('activate', function () {

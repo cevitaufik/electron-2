@@ -12,7 +12,12 @@ function doAThing(): void {
 
   const ipcHandlerBtn = document.getElementById('ipcHandler')
   ipcHandlerBtn?.addEventListener('click', () => {
-    window.electron.ipcRenderer.send('ping')
+    // window.electron.ipcRenderer.send('ping')
+
+    window.electron.ipcRenderer.invoke('request', 'nama').then((result) => {
+      // console.log(result) // Output: Selamat datang, nama Anda adalah nama
+      alert(result)
+    })
   })
 }
 
@@ -24,3 +29,9 @@ function replaceText(selector: string, text: string): void {
 }
 
 init()
+
+function send(arg: string): void {
+  window.electron.ipcRenderer.invoke('request', arg).then((result) => {
+    alert(result)
+  })
+}
