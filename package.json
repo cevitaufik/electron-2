@@ -29,12 +29,15 @@
     "@electron-toolkit/eslint-config-prettier": "^2.0.0",
     "@electron-toolkit/eslint-config-ts": "^1.0.1",
     "@electron-toolkit/tsconfig": "^1.0.1",
+    "@popperjs/core": "^2.11.8",
     "@types/node": "^18.19.9",
+    "bootstrap": "^5.3.3",
     "electron": "^28.2.0",
     "electron-builder": "^24.9.1",
     "electron-vite": "^2.0.0",
     "eslint": "^8.56.0",
     "prettier": "^3.2.4",
+    "sass": "^1.77.0",
     "typescript": "^5.3.3",
     "vite": "^5.0.12"
   }
